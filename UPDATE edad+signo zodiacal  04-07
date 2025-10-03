@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int main() {
+
+    int anionac;
+    int mesnac;
+    int dianac;
+    int edad;
+    int anioact;
+    int mesact;
+    int diaact;
+    do
+    {
+        printf("Ingrese su año de nacimiento\n");
+        scanf("%d",&anionac);
+        printf("Ingrese su mes de nacimiento\n");
+        scanf("%d",&mesnac);
+        printf("Ingrese su dia de nacimiento\n");
+        scanf("%d",&dianac);
+        printf("Ingrese el año actual\n");
+        scanf("%d",&anioact);
+        printf("Ingrese el mes actual\n");
+        scanf("%d",&mesact);
+        printf("Ingrese dia actual\n");
+        scanf("%d",&diaact);
+    }
+    while((anionac<0) && (mesnac<0) && (mesnac>=12) && (dianac<0) &&( dianac>=31));
+    edad=anioact-anionac;
+    if((mesnac>=mesact) && (dianac>diaact)) {
+        printf("Ud. tiene %d años",edad-1);
+    }
+    else {
+        printf("Ud. tiene %d años",edad);
+    }
+    if((mesnac==1) && (dianac<=19) || (mesnac==12) && (dianac>=22)){
+        printf("\n Tu signo del zodiaco: Capricornio");
+    }
+    else if((mesnac==1) && (dianac>19) || (mesnac==2) && (dianac<=18)){
+        printf("\n Tu signo del zodiaco: Acuario");
+    }
+    else if((mesnac==2) && (dianac>18) || (mesnac==3) && (dianac<=20)){
+        printf("\n Tu signo del zodiaco: Piscis");
+    }
+    else if((mesnac==3) && (dianac>20) || (mesnac==4) && (dianac<=19)){
+        printf("\n Tu signo del zodiaco: Aries");
+    }
+    else if((mesnac==4) && (dianac>19) || (mesnac==5) && (dianac<=20)){
+        printf("\n Tu signo del zodiaco: Tauro");
+    }
+    else if((mesnac==5) && (dianac>20) || (mesnac==6) && (dianac<=20)){
+        printf("\n Tu signo del zodiaco: Géminis");
+    }
+    else if((mesnac==6) && (dianac>20) || (mesnac==7) && (dianac<=22)){
+        printf("\n Tu signo del zodiaco: Cáncer");
+    }
+    else if((mesnac==7) && (dianac>22) || (mesnac==8) && (dianac<=22)){
+        printf("\n Tu signo del zodiaco: Leo");
+    }
+    else if((mesnac==8) && (dianac>22) || (mesnac==9) && (dianac<=22)){
+        printf("\n Tu signo del zodiaco: Virgo");
+    }
+    else if((mesnac==9) && (dianac>22) || (mesnac==10) && (dianac<=22)){
+        printf("\n Tu signo del zodiaco: Libra");
+    }
+    else if((mesnac==10) && (dianac>22) || (mesnac==11) && (dianac<=21)){
+        printf("\n Tu signo del zodiaco: Escorpio");
+    }
+    else if((mesnac==11) && (dianac>21) || (mesnac==12) && (dianac<=21)){
+        printf("\n Tu signo del zodiaco: Sagitario");
+    }
+    return 0;
+}
