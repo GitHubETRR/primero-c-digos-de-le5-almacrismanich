@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int contarLetra(char cadena[], char letra) {
+    int i = 0, contador = 0;
+
+    while (cadena[i] != '\0') {
+        if (cadena[i] == letra) {
+            contador++;
+        }
+        i++;
+    }
+
+    return contador;
+}
+
+int main() {
+    char texto[100];
+    char letra;
+
+    printf("ingrese un texto: ");
+    fgets(texto, 100, stdin);
+
+    printf("ingrese la letra a buscar: ");
+    scanf("%c", &letra);
+
+    int repite = contarLetra(texto, letra);
+
+    printf("la letra '%c' aparece %d veces.\n", letra, repite);
+
+    return 0;
+}
+
