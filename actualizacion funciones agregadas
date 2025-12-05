@@ -1,0 +1,235 @@
+#include <stdio.h>
+
+#define CAPRICORNIO 1
+#define ACUARIO 2
+#define PISCIS 3
+#define ARIES 4
+#define TAURO 5
+#define GEMINIS 6
+#define CANCER 7
+#define LEO 8
+#define VIRGO 9
+#define LIBRA 10
+#define ESCORPIO 11
+#define SAGITARIO 12
+
+void mostrarMenu();
+void mostrarCaracteristicas(int signo);
+void mostrarOpcion2(int signo);
+void mostrarOpcion3(int signo);
+void mostrarOpcion4(int signo);
+
+int main() {
+    int signo;
+    int opcion;
+
+    printf("Bienvenido/a\nSeguí los siguientes pasos:");
+    printf("\n1- Busca en qué signo entra la fecha de tu cumpleaños\n2- Ingresa el número asignado a su derecha para proceder\n");
+    printf("\nCapricornio(22/12 al 19/01) = 1\nAcuario(20/12 al 18/01) = 2\nPiscis(19/02 al 19/03 = 3\nAries(20/03 al 18/04) = 4\nTauro(19/04 al 20/05) = 5\nGéminis(21/05 al 20/06) = 6\nCáncer(21/06 al 22/07 = 7\nLeo(23/07 al 22/08) = 8\nVirgo(23/08 al 22/09) = 9\nLibra(23/09 al 22/10) = 10\nEscorpio(23/10 al 21/11) = 11\nSagitario(22/11 al 21/12) = 12\n");
+
+    scanf("%d", &signo);
+
+    do {
+        mostrarMenu();
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1:
+                mostrarCaracteristicas(signo);
+                break;
+
+            case 2:
+                mostrarOpcion2(signo);
+                break;
+
+            case 3:
+                mostrarOpcion3(signo);
+                break;
+
+            case 4:
+                mostrarOpcion4(signo);
+                break;
+
+            case 5:
+                printf("Saliendo...\n");
+                break;
+
+            default:
+                printf("Opción no válida. Intente de nuevo.\n");
+        }
+
+    } while (opcion != 5);
+
+    return 0;
+}
+void mostrarMenu() {
+    printf("Seleccione una opción:\n");
+    printf("1. Opción 1:\n Características del signo\n");
+    printf("2. Opción 2:\n Información técnica\n");
+    printf("3. Opción 3:\n Compatibilidades\n");
+    printf("4. Opción 4:\n Celebridades con tu mismo zodíaco\n");
+    printf("5. Salir\n");
+    printf("Ingrese su opción:");
+}
+
+void mostrarCaracteristicas(int signo) {
+    switch (signo) {
+        case CAPRICORNIO:
+            printf("Capricornio simboliza la disciplina, la responsabilidad y la ambición...\n");
+            break;
+        case ACUARIO:
+            printf("caract Capricornio\n");
+            break;
+        case PISCIS:
+            printf("caract acuaio\n");
+            break;
+        case ARIES:
+            printf("caract ario\n");
+            break;
+        case TAURO:
+            printf("caract tauro\n");
+            break;
+        case GEMINIS:
+            printf("caract geminis\n");
+            break;
+        case CANCER:
+            printf("cract cancer\n");
+            break;
+        case LEO:
+            printf("caract leo\n");
+            break;
+        case VIRGO:
+            printf("caract virgo\n");
+            break;
+        case LIBRA:
+            printf("caract libra\n");
+            break;
+        case ESCORPIO:
+            printf("caract escorpio\n");
+            break;
+        case SAGITARIO:
+            printf("cct sagitario\n");
+            break;
+    }
+}
+
+void mostrarOpcion2(int signo) {
+    switch (signo) { 
+        case CAPRICORNIO: 
+            printf("info\n"); 
+            break; 
+        case ACUARIO: 
+            printf("info\n"); 
+            break; 
+        case PISCIS: 
+            printf("info\n"); 
+            break; 
+        case ARIES: 
+            printf("info\n"); 
+            break; 
+        case TAURO: 
+            printf("info\n"); 
+            break; 
+        case GEMINIS: 
+            printf("info\n"); 
+            break; 
+        case CANCER: 
+            printf("info\n"); 
+            break; 
+        case LEO: 
+            printf("info\n"); 
+            break; 
+        case VIRGO: 
+            printf("info\n"); 
+            break; 
+        case LIBRA: 
+            printf("info\n");
+            break; 
+        case ESCORPIO: 
+            printf("info\n");  
+            break;
+        case SAGITARIO: 
+            printf("info\n"); 
+            break; }
+}
+
+void mostrarOpcion3(int signo) {
+    switch (signo) { 
+        case CAPRICORNIO: 
+            printf("comp\n"); 
+            break; 
+        case ACUARIO: 
+            printf("comp\n"); 
+            break; 
+        case PISCIS: 
+            printf("comp\n"); 
+            break; 
+        case ARIES: 
+            printf("comp\n"); 
+            break; 
+        case TAURO: 
+            printf("comp\n"); 
+            break; 
+        case GEMINIS: 
+            printf("comp\n"); 
+            break; 
+        case CANCER: 
+            printf("comp\n"); 
+            break; 
+        case LEO: 
+            printf("comp\n"); 
+            break; 
+        case VIRGO: 
+            printf("comp\n"); 
+            break; 
+        case LIBRA: 
+            printf("comp\n");
+            break; 
+        case ESCORPIO: 
+            printf("comp\n");  
+            break;
+        case SAGITARIO: 
+            printf("comp\n"); 
+            break; }
+}
+
+void mostrarOpcion4(int signo) {
+    switch (signo) { 
+        case CAPRICORNIO: 
+            printf("celeb\n"); 
+            break; 
+        case ACUARIO: 
+            printf("celeb\n"); 
+            break; 
+        case PISCIS: 
+            printf("celeb\n"); 
+            break; 
+        case ARIES: 
+            printf("celeb\n"); 
+            break; 
+        case TAURO: 
+            printf("celeb\n"); 
+            break; 
+        case GEMINIS: 
+            printf("celeb\n"); 
+            break; 
+        case CANCER: 
+            printf("celeb\n"); 
+            break; 
+        case LEO: 
+            printf("celeb\n"); 
+            break; 
+        case VIRGO: 
+            printf("celeb\n"); 
+            break; 
+        case LIBRA: 
+            printf("celeb\n");
+            break; 
+        case ESCORPIO: 
+            printf("celeb\n");  
+            break;
+        case SAGITARIO: 
+            printf("celeb\n"); 
+            break; }
+
+}
