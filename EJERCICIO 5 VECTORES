@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int i;
+    float producto = 0;
+
+    printf("ingrese la cant. de componentes del vector: ");
+    scanf("%d", &n);
+
+    float A[n], B[n];
+
+    printf("ingrese los valores del vector A:\n");
+    for (i = 0; i < n; i++) {
+        printf("A[%d]: ", i);
+        scanf("%f", &A[i]);
+    }
+
+    printf("ingrese los valores del vector B:\n");
+    for (i = 0; i < n; i++) {
+        printf("B[%d]: ", i);
+        scanf("%f", &B[i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        producto += A[i] * B[i];
+    }
+
+    printf("el producto escalar es: %.2f\n", producto);
+
+    return 0;
+}
