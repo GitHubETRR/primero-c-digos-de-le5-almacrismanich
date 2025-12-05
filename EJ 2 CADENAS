@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void pasaMinuscula(char cadena[]) {
+    int i = 0;
+
+    while (cadena[i] != '\0') {
+
+       
+        if (cadena[i] >= 'A' && cadena[i] <= 'Z') {
+            cadena[i] = cadena[i] + 32;   
+        }
+
+        i++;
+    }
+}
+
+int main() {
+    char texto[100];
+
+    printf("ingrese un texto: ");
+    fgets(texto, 100, stdin);
+
+    pasaMinuscula(texto); 
+
+    printf("en minusculas seria: %s\n", texto);
+
+    return 0;
+}
