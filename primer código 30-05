@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+
+      int anionac;
+      int mesnac;
+      int dianac;
+      int edad;
+      do
+      {
+            printf("Ingrese su año de nacimiento\n");
+            scanf("%d",&anionac);
+            printf("Ingrese su mes de nacimiento\n");
+            scanf("%d",&mesnac);
+            printf("Ingrese su dia de nacimiento\n");
+            scanf("%d",&dianac);
+      }
+      while((anionac<0) && (mesnac<0) && (mesnac>=12) && (dianac<0) &&( dianac>=31));
+          if((mesnac>=6) && (dianac!=1)) {
+            edad=2025-anionac;
+            printf("Ud. tiene %d años",edad-1);
+      }
+      else {
+            printf("Ud. tiene %d años",edad);
+      }
+      return 0;
+}

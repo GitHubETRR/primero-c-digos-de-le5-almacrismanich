@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 50
+
+void contarMayor(int v[]) {
+    int mayor = v[0];
+    int repeticiones = 1;
+
+    for (int i = 1; i < N; i++) {
+        if (v[i] > mayor) {
+            mayor = v[i];
+            repeticiones = 1;   
+        }
+        else if (v[i] == mayor) {
+            repeticiones++;        
+        }
+    }
+
+    printf("\nEl mayor valor es: %d\n", mayor);
+    printf("Se repite %d veces\n", repeticiones);
+}
+
+int main() {
+    int v[N];
+
+    srand(time(NULL));  
+
+
+    for (int i = 0; i < N; i++) {
+        v[i] = 10 + rand() % 11;  
+    }
+
+    contarMayor(v);
+
+    return 0;
+}
